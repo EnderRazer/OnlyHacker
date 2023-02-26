@@ -1,0 +1,101 @@
+.navbar-container {
+    overflow: hidden;
+    z-index: 2;
+    position: relative;
+    top: 0  ;
+    width: 100%;
+    background: linear-gradient(to left, #000000 0%, #009933 200%);
+    color: lime;
+    box-shadow: 0px 2px 4px white;
+}
+.navbar-title-container {
+    display: flex;
+    padding: 10px;
+}
+.navbar-button-container {
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    opacity: 80%;
+}
+.navbar-button-container .button{
+    opacity: 100%;
+    width: 100%;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #000000 0%, #009933 200%);
+    color: white;
+    text-align: center;
+    margin:0px 0px 3px 10px;
+    border: 1px solid #000023;
+    transition: transform 250ms;
+}
+.navbar-button-container .button:last-child{
+    margin-right: 10px;
+}
+.navbar-button-container .button:hover {
+    z-index: 5;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px black;
+}
+.main-container {
+    position:fixed;
+    overflow: scroll;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+}
+.log-container {
+    display:flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.log-card {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    background-color: #000000;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px white;
+    transition: transform 1s;
+}
+.log-card:hover {
+    box-shadow: 0px 0px 15px white;
+}
+
+.log-card .type {
+    width: 20%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.log-card .username {
+    width: 20%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.log-card .message {
+    width: 20%;
+    word-wrap: break-word;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.log-card .datetime{
+    width: 20%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.log-card .allowed{
+    width: 20%;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

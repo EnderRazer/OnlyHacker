@@ -2,24 +2,24 @@ const LogCard = (props) => {
   const log = props.data;
   return (
     <div className="log-card">
-      <div className="type">
-        <p>{log.type}</p>
+      <div className="cell">
+        {log.dt}
       </div>
       <hr></hr>
-      <div className="username">
-        <p>{log.name}</p>
+      <div className="cell">
+        {log.type}
       </div>
       <hr></hr>
-      <div className="message">
-        <p>{log.message}</p>
+      <div className="cell">
+        {log.name}
       </div>
       <hr></hr>
-      <div className="datetime">
-        <p>{log.dt}</p>
+      <div className="cell">
+        {log.message}
       </div>
       <hr></hr>
-      <div className="allowed">
-        <p>{log.allowed ? "True" : "False"}</p>
+      <div className="cell">
+        {log.allowed ? "True" : "False"}
       </div>
     </div>
   );

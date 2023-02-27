@@ -8,10 +8,24 @@ export const logSlice = createSlice({
         {
           name: "@TestName",
           type: "user",
-          dt: "2023-02-26 19:45:25",
+          dt: "2023-02-22 19:45:25",
           message: "Testing short message",
           allowed: true,
         },
+        {
+            name: "@TestName",
+            type: "user",
+            dt: "2022-02-22 19:55:25",
+            message: "Testing short message",
+            allowed: true,
+          },
+          {
+            name: "@TestName",
+            type: "user",
+            dt: "2023-01-22 12:45:25",
+            message: "Testing short message",
+            allowed: true,
+          },
         {
           name: "@TestLooooooongName",
           type: "chat",
@@ -36,6 +50,14 @@ export const logSlice = createSlice({
             "Testing very very very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very not short message from this user with nickname consist of a lot of different symbols!",
           allowed: true,
         },
+        {
+            name: "@ANOTHERLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOONGTestLooooooongName",
+            type: "chat",
+            dt: "2023-12-26 12:25:25",
+            message:
+              "Testing very very very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very veryvery very very very very very not short message from this user with nickname consist of a lot of different symbols!",
+            allowed: true,
+          },
       ],
     },
   },

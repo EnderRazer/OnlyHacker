@@ -4,9 +4,9 @@
     position: relative;
     top: 0  ;
     width: 100%;
-    background: linear-gradient(to left, #000000 0%, #009933 200%);
-    color: lime;
-    box-shadow: 0px 2px 4px white;
+    background: linear-gradient(to left, white 0%, #009933 200%);
+    color: black;
+    box-shadow: 0px 2px 4px black;
 }
 .navbar-title-container {
     display: flex;
@@ -22,8 +22,8 @@
     opacity: 100%;
     width: 100%;
     text-decoration: none;
-    background: linear-gradient(to bottom, #000000 0%, #009933 200%);
-    color: white;
+    background: linear-gradient(to bottom, white 0%, #009933 200%);
+    color: black;
     text-align: center;
     margin:0px 0px 3px 10px;
     border: 1px solid #000023;
@@ -40,62 +40,60 @@
 .main-container {
     position:fixed;
     overflow: scroll;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     width: 100%;
     height: 100%;
     margin: 0;
     text-align: center;
 }
+.log-toolbar {
+    margin: 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.log-toolbar h1 {
+    margin: auto;
+}
+.log-tool {
+    margin: 10px;
+}
 .log-container {
     display:flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
+    background-color: white;
+    height: 80%;
+    color: black;
     margin: 0;
     text-align: center;
+    overflow: scroll;
+}
+.log-header {
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black  ;
+    margin: 10px;
 }
 .log-card {
     height: 75px;
     display: flex;
     flex-direction: row;
-    background-color: #000000;
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
     margin: 10px;
-    padding: 10px;
-    box-shadow: 0px 0px 5px white;
-    transition: transform 1s;
 }
 .log-card:hover {
-    box-shadow: 0px 0px 15px white;
+    box-shadow: 0px 0px 15px black;
 }
 
-.log-card .type {
-    width: 20%;
-    word-wrap: break-word;
+.cell {
+    padding: 15px;
+    position: relative;
+    width: calc(20%);
+    display: inline-block;
     overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
-}
-.log-card .username {
-    width: 20%;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.log-card .message {
-    width: 20%;
-    word-wrap: break-word;
-    overflow:hidden;
-    text-overflow: ellipsis;
-}
-.log-card .datetime{
-    width: 20%;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.log-card .allowed{
-    width: 20%;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    text-align: center;
 }

@@ -97,3 +97,27 @@
     text-overflow: ellipsis;
     text-align: center;
 }
+.pag-nav {
+    margin: 10px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.pag-set {
+    margin: 10px;
+}
+.pag-but-group {
+    margin: auto;
+}
+.pag-but-group > input {
+    border-radius: 15%;
+    border: 0;
+    height: 25px;
+    width: 60px;
+    margin-right: 5px;
+    text-align: center;
+}
+.pag-but-group > input.active {
+    background-color: aqua;
+}

@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import logSlice from "./logSlice";
+import logs from "./logSlice";
 
 const store = configureStore({
   reducer: {
-    logSlice,
+    logs,
   },
 });
 

@@ -1,26 +1,27 @@
 const LogCard = (props) => {
   const log = props.data;
+  const options = {
+    year: "numeric",
+    month: "numeric",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+  };
+  const formatter = new Intl.DateTimeFormat("en-GB", options);
   return (
     <div className="log-card">
-      <div className="cell">
-        {log.dt}
-      </div>
+      <div className="cell">{formatter.format(new Date(log.dt))}</div>
       <hr></hr>
-      <div className="cell">
-        {log.type}
-      </div>
+      <div className="cell">{log.sender_type}</div>
       <hr></hr>
-      <div className="cell">
-        {log.name}
-      </div>
+      <div className="cell">{log.sender_name}</div>
       <hr></hr>
-      <div className="cell">
+      <div title={log.message} className="cell">
         {log.message}
       </div>
       <hr></hr>
-      <div className="cell">
-        {log.allowed ? "True" : "False"}
-      </div>
+      <div className="cell">{log.allowed ? "True" : "False"}</div>
     </div>
   );
 };

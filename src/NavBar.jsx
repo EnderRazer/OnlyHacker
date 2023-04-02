@@ -2,8 +2,12 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 
 class NavBar extends Component {
-  state = {};
-
+  state = {
+    activeTab: "",
+  };
+  handleRoute = (e) => {
+    this.setState({ activeTab: e.target.innerText });
+  };
   render() {
     return (
       <div className="navbar-container">
@@ -16,17 +20,32 @@ class NavBar extends Component {
           <h1>OnlyHacker</h1>
         </div>
         <div className="navbar-button-container">
-          <Link className="button" to="/">
-            {" "}
-            <p>Home</p>{" "}
+          <Link
+            className={
+              "button" + (this.state.activeTab === "Home" ? " active" : "")
+            }
+            to="/"
+            onClick={this.handleRoute}
+          >
+            <p>Home</p>
           </Link>
-          <Link className="button" to="/Dashboard">
-            {" "}
-            <p>Dashboard</p>{" "}
+          <Link
+            className={
+              "button" + (this.state.activeTab === "Dashboard" ? " active" : "")
+            }
+            to="/Dashboard"
+            onClick={this.handleRoute}
+          >
+            <p>Dashboard</p>
           </Link>
-          <Link className="button" to="/Logs">
-            {" "}
-            <p>Logs</p>{" "}
+          <Link
+            className={
+              "button" + (this.state.activeTab === "Logs" ? " active" : "")
+            }
+            to="/Logs"
+            onClick={this.handleRoute}
+          >
+            <p>Logs</p>
           </Link>
         </div>
       </div>

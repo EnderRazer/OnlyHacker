@@ -1,11 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { logsApi } from "./logsApi";
 
-import logSlice from "./logSlice";
+import logs from "./logSlice";
 
 const store = configureStore({
   reducer: {
-    logSlice,
+    logs,
+    [logsApi.reducerPath]: logsApi.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(logsApi.middleware),
 });
 
 export default store;
